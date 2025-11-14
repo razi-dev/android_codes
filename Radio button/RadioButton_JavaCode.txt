@@ -1,0 +1,21 @@
+//Radio Buttion JavaCode
+
+
+RadioGroup rgroup;
+Button b1;
+
+implement OnClickListener
+
+
+rgroup=findViewById(R.id.radiogroup);
+b1=findViewById(R.id.button);
+b1.setOnClickListener(this);
+
+@Override
+    public void onClick(View view) 
+    {
+      int selecteditem= rgroup.getCheckedRadioButtonId();
+      RadioButton rb=findViewById(selecteditem);
+      Toast.makeText(this,""+rb.getText(),Toast.LENGTH_LONG).show();
+    }
+
